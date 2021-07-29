@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+h1{
+    font: fantasy green bold;
+    text-align: center;
+    border: yellow solid; 
+    border-radius: 20px;
+    border-width: 2px;
+    display: inline-block;
+    padding: 30px;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+h2{
+    color: dodgerblue;
+    text-align: center;
+    border: rgb(32, 253, 131) solid; 
+    border-radius: 20px;
+    border-width: 2px;
+    display: inline-block;
+    padding: 30px;
+    margin-left: 500px;
+    margin-top: 30px;
+}
+h3{
+    color: mediumaquamarine;
+}
+h4{
+    color: indigo;
+}
+p{
+    font-family: cursive;
+    color: saddlebrown;
+
+}
+div{
+    font-family: 'MedievalSharp', cursive;
+    color: rgb(245, 209, 8);
+    border: darkblue 2px dashed;
+}
+span{
+    font: 40px bold;
+    border: black 1px solid;
+}
+.lipsum1{
+    color: rgb(8, 245, 8);
+    border: rgb(139, 0, 116) 2px dashed;
+}
+.lipsum2{
+    color: rgb(245, 16, 8);
+    border: rgb(139, 130, 0) 2px dashed;
+}
+.lipsum3{
+    color: rgb(178, 8, 245);
+    border: rgb(119, 23, 44) 2px dashed;
+}
+.lipsum4{
+    color: darkturquoise;
+    border: dimgray 1.5px solid;
+}
