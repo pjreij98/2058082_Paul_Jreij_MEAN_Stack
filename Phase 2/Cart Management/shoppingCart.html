@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="storageFile.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body onload="displayData()">
+    <h1>Shopping Cart</h1>
+    <div class="container">
+        <p id="cart-size">Cart Size: </p> <br>
+        <input type="button" value="Checkout" onclick= "location.href = 'cartCheckout.html';"><br>
+        <div class="row">
+            <div class="col" id = "peach">
+                <p>Name: Peach</p>
+                <p id="totalPeach"></p><br>
+                <p>Price: $2.99</p><br>
+                <img width="150px" src="https://media.istockphoto.com/photos/peach-isolate-peach-with-slice-on-white-background-full-depth-of-picture-id1200767905?k=6&m=1200767905&s=612x612&w=0&h=I2mTjY_-OuPL7bQzwbVWcUkea8_INy7SiUo80BT71BU=" alt="peach">
+                <br><input type="button" value="Add" onclick="addItem('Peach', 2.99)">
+                <br><input type="button" value="Remove" onclick="removeItem('Peach')">
+            </div>
+            <div class="col" id="basketball">
+                <p>Name: Basketball</p>
+                <p id="totalBasketball"></p><br>
+                <p>Price: $25</p><br>
+                <img width="150px" src="https://shop.wilson.com/media/catalog/product/cache/38/image/9df78eab33525d08d6e5fb8d27136e95/c/7/c7dd204a5c8de77cfa036eb232a5e64659c7b2e1_WTB0516_Evolution_v2.jpg" alt="bball">
+                <br><input type="button" value="Add" onclick="addItem('Basketball', 25)">
+                <br><input type="button" value="Remove" onclick="removeItem('Basketball')">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="rose">
+                <p>Name: Rose</p>
+                <p id="totalRose"></p><br>
+                <p>Price: $4.99</p><br>
+                <img width="150px" src="https://www.lovingly.com/wp-content/uploads/2019/09/red-rose-on-black-background-649x1024.jpg" alt="rose">
+                <br><input type="button" value="Add" onclick="addItem('Rose', 4.99)">
+                <br><input type="button" value="Remove" onclick="removeItem('Rose')">
+            </div>
+            <div class="col" id="airsoft-gun">
+                <p>Name: Airsoft Gun</p>
+                <p id="totalASGun"></p><br>
+                <p>Price: $35</p><br>
+                <img width="150px" src="https://www.sportsmans.com/medias/soft-air-firepower-m4b-aeg-airsoft-rifle-1415677-1.jpg?context=bWFzdGVyfGltYWdlc3w1MjYxNXxpbWFnZS9qcGVnfGltYWdlcy9oN2EvaGIwLzg4NTY1NDE5ODY4NDYuanBnfDllMTliNTA5NjU3MzExMmJlYzk4MDUwZDgzNWVhMTM0NGZhYzlhOWFkYmE4ZDRkMTVjYjIxODk4OTQ0OTBhMzE" alt="airsoft gun">
+                <br><input type="button" value="Add" onclick="addItem('Airsoft Gun', 35)">
+                <br><input type="button" value="Remove" onclick="removeItem('Airsoft Gun')">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
