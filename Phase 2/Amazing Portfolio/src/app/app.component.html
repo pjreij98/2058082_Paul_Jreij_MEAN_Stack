@@ -1,0 +1,55 @@
+<div *ngIf="flag">
+    <h2>Login Form</h2>
+<form #loginRef="ngForm" 
+(ngSubmit)="checkUser(loginRef)">
+<label>Username: </label>
+<input type="text" name="user" ngModel required minlength="2" #userLogin/><br/>
+<label>Password: </label>
+<input type="password" name="pass" ngModel required #passLogin/><br/>
+<input type="button" value="Login" [disabled]="!loginRef.valid" (click)="showPortfolio(userLogin, passLogin)"/>
+<input type="reset" value="Reset"/><br>
+<input type="button" value="Sign Up" (click)="showRegistration()">
+</form>
+<!-- {{loginRef.valid}} -->
+<br/>
+{{msg}}
+</div>
+
+<div *ngIf="reg">
+    <h2>Registration Form</h2>
+    <form>
+        <input type="button" value="Login" (click)="showSignIn(userRef, passRef)"><br>
+        <label>First Name: </label>
+        <input type="text" name="firstName"><br>
+        <label>Last Name: </label>
+        <input type="text" name="lastName"><br>
+        <label>Username: </label>
+        <input type="text" name="userReg" ngModel required minlength="2" #userRef><br>
+        <label>Password: </label>
+        <input type="password" name="passReg" #passRef><br>
+        <input type="button" value="Register" (click)="showSignIn(userRef, passRef)">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
+<div *ngIf="port">
+    <h2>My Portfolio</h2>
+    Welcome {{user}} <br>
+    <form>
+        Contact Name: <input type="text" #contactRef> <br>
+        Phone No.: <input type="number" #phoneRef>
+        <input type="button" value="Save" (click)="fillTable(contactRef, phoneRef)">
+        <input type="reset" value="Reset">
+    </form>
+    <h3>Contact Details</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.contactName}}</td>
+            <td>{{emp.phoneNo}}</td>
+        </tr>
+    </table>
+</div>
