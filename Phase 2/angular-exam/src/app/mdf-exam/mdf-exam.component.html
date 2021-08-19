@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Angular Exam using Model Driven Form</h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div *ngFor="let q of allQuestions">
+            <p>{{q.question}}</p>
+            <input type="radio" formControlName={{q.question}}  value={{q.ans1}} ngModel required><span id="{{q.ans1}}">{{q.ans1}}</span> <br>
+            <input type="radio" formControlName={{q.question}}  value={{q.ans2}} ngModel required><span id="{{q.ans2}}">{{q.ans2}}</span> <br>
+            <input type="radio" formControlName={{q.question}}  value={{q.ans3}} ngModel required><span id="{{q.ans3}}">{{q.ans3}}</span> <br>
+            <input type="radio" formControlName={{q.question}}  value={{q.ans4}} ngModel required><span id="{{q.ans4}}">{{q.ans4}}</span> <br>
+        </div>
+        <input type="submit" value="Submit" [disabled]="myForm.invalid || isExamDone">
+    </form>
+    <span id="PassFail"></span>
+    <br><span id="examScore"></span>
+</div>
