@@ -4,7 +4,7 @@ let http = require("http").Server(app);
 let io = require("socket.io")(http);
 let mongoose = require("mongoose");
 let url = "mongodb://localhost:27017/tcsMEAN";
-let
+
 mongoose.pluralize(null);
 
 mongoose.connect(url).then(res=>console.log("Connected")).catch(err=>console.log(err));
